@@ -35,13 +35,4 @@ public class SingletonTest {
         instance2.getName();
         System.out.println(instance1 == instance2);
     }
-
-    /**
-     * 饿汉单例
-     */
-    @Test
-    public void testDclSingleton() {
-        String aa = "aa" + "-" + System.currentTimeMillis();
-        System.out.println(aa);
-    }
 }

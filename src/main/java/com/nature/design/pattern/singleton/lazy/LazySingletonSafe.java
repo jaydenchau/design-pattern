@@ -1,5 +1,7 @@
 package com.nature.design.pattern.singleton.lazy;
 
+import java.sql.SQLOutput;
+
 /**
  * 懒汉单例模式（线程安全）
  * 在使用时才加载对象
@@ -12,7 +14,7 @@ public class LazySingletonSafe {
     /**
      * 私有构造方法避免类被外部实例化
      */
-    public LazySingletonSafe() {
+    private LazySingletonSafe() {
     }
 
     /**
@@ -24,7 +26,7 @@ public class LazySingletonSafe {
     }
 
     public static LazySingletonSafe getInstance() {
-        return Holder.getInstance();
+        return SingletonHolder.INSTANCE;
     }
 
     public void getName() {
