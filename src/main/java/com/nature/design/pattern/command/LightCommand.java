@@ -19,6 +19,6 @@ public class LightCommand implements Command {
 
     @Override
     public void turnOff() {
-        light.turnOn();
+        light.turnOff();
     }
 }
