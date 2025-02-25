@@ -8,7 +8,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @date 2021/11/8 22:26
  */
 @SpringBootApplication
-//@ComponentScan(value = {"com.gobrs.async"})
+// @ComponentScan({"com.nature.**"})
 public class DesignPatternApplication {
 
     public static void main(String[] args) {

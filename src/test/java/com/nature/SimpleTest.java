@@ -1,23 +1,16 @@
 package com.nature;
 
 import cn.hutool.core.net.url.UrlBuilder;
-import com.dtflys.forest.backend.url.URLBuilder;
 import com.dtflys.forest.http.ForestResponse;
+import com.nature.opensource.flow.LiteFlowService;
 import com.nature.park.client.ParkClient;
 import com.nature.park.client.ParkResult;
-import com.nature.park.service.ParkService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
-import javax.net.ssl.HttpsURLConnection;
-import javax.net.ssl.SSLContext;
-import javax.net.ssl.TrustManager;
-import javax.net.ssl.X509TrustManager;
-import java.net.*;
-import java.security.KeyManagementException;
-import java.security.NoSuchAlgorithmException;
-import java.security.cert.X509Certificate;
+import java.net.HttpURLConnection;
+import java.net.URL;
 import java.util.Map;
 
 /**
@@ -27,9 +20,16 @@ import java.util.Map;
 @SpringBootTest
 public class SimpleTest {
 
-
     @Autowired
     private ParkClient client;
+
+    @Autowired
+    private LiteFlowService liteFlowService;
+
+    @Test
+    public void testFlow() throws Exception {
+        liteFlowService.testConfig();
+    }
 
     @Test
     public void testClient() {
